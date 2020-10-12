@@ -57,3 +57,17 @@ class Credentials:
  #                       users_credentials.remove(credential)
                         Credentials.credentials_list.remove(credential)
         return users_credentials
+
+    def generate_password(length):
+        '''
+        method that generates a random password
+
+        Args:
+            length: the length the user wants the password to be
+        Returns:
+            random alphanumeric string
+        '''
+        letters_digits = string.ascii_lowercase + string.digits
+        result = ''.join((random.choice(letters_digits) for i in range(length)))
+        return result
+    
