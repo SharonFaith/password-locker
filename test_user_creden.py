@@ -103,5 +103,14 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_creden.app_uname, 'pat12')
         self.assertEqual(self.new_creden.app_pword, '1234')
 
+    def test_add_details(self):
+        '''
+        test to check if a user can save existing account credentials
+        '''
+        self.new_creden.save_creden()
+
+        self.assertEqual(len(Credentials.credentials_list), 1)
+
+
 if __name__=='__main__':
     unittest.main()
