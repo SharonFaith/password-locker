@@ -12,3 +12,10 @@ def save_users(user):
     
 def check_username(user_name):
     return User.user_exist(user_name)
+
+def check_login(user_name, pass_word):
+    return User.login(user_name, pass_word)
+
+def create_credential(user_name, app_name, app_uname, app_pword):
+    new_credential = Credentials(user_name, app_name, app_uname, app_pword)
+    return new_credential
