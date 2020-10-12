@@ -7,7 +7,7 @@ Password Locker is a command line run app that allows a user to create an accoun
 
 ## Setup/Installation Requirements
 * Use a desktop or laptop, phone or tablet.
-* To install, go to URL : https://github.com/SharonFaith/password-locker then clone the repository with the git clone command  in the terminal and url,
+* To install, go to URL : https://github.com/SharonFaith/password-locker then clone the repository with the git clone command in the terminal
 * The repository can also be downloaded from the same URL:
 * Unzip the file
 * Move contents to folder you desire
