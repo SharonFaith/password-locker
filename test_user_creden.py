@@ -1,7 +1,7 @@
 import unittest
 #import pyperclip
 from user import User
-from credentials import Credentials
+#from credentials import Credentials
 
 class TestUser(unittest.TestCase):
     """
@@ -24,7 +24,16 @@ class TestUser(unittest.TestCase):
         '''
         User.user_list = []
 
+    def test_init(self):
+        '''
+        to test if the object is initialized properly
+        '''
 
+        self.assertEqual(self.new_user.first_name, 'Patrick')
+        self.assertEqual(self.new_user.last_name, 'Rodgers')
+        self.assertEqual(self.new_user.email, 'patrodg@email.com')
+        self.assertEqual(self.new_user.username, 'pat_rodge')
+        self.assertEqual(self.new_user.password, 'pal1234')
 
 if __name__=='__main__':
     unittest.main()
