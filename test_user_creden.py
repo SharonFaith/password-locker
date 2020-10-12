@@ -121,5 +121,18 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(len(Credentials.credentials_list), 2)
 
+    def test_display_details(self):
+        '''
+        test to check if a specific user's credentials can be displayed
+
+        '''
+        self.new_creden.save_creden()
+        another_creden = Credentials('pat_rodge', 'facebook', 'pat11', '12345')
+        another_creden.save_creden()
+        sec_creden = Credentials('ann', 'facebook', 'ann11', '12345')
+        sec_creden.save_creden()
+        
+        self.assertEqual(len(Credentials.display_details('pat_rodge')), 2)
+
 if __name__=='__main__':
     unittest.main()

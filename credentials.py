@@ -20,3 +20,18 @@ class Credentials:
         method that saves credentials
         '''
         Credentials.credentials_list.append(self)
+    
+    @classmethod
+    def display_details(cls, user_name):
+        '''
+        method that displays a user\'s credentials
+        Args:
+            user_name: takes in the currently logged user
+        Returns: 
+            An array containing the credentials
+        '''
+        users_credentials = []
+        for credential in cls.credentials_list:
+            if credential.username == user_name:
+                users_credentials.append(credential)
+        return users_credentials
