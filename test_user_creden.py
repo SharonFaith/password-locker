@@ -54,7 +54,16 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(len(User.user_list), 2)
 
+    def test_user_exists(self):
+        '''
+        to test if a user already exists
+        '''
+        self.new_user.save_user()
+        test_user = User('Yod', 'Ger', 'yod@email.com', 'anon', 'pal1234')
+        test_user.save_user()
 
+        user_exists = User.user_exist('anon')
+        self.assertTrue(user_exists)
 
 if __name__=='__main__':
     unittest.main()
