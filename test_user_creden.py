@@ -111,6 +111,15 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(len(Credentials.credentials_list), 1)
 
+    def test_add_multiple_details(self):
+        '''
+        test to check if multiple credentials can be added
+        '''
+        self.new_creden.save_creden()
+        another_creden = Credentials('pat_rodge', 'facebook', 'pat11', '12345')
+        another_creden.save_creden()
+
+        self.assertEqual(len(Credentials.credentials_list), 2)
 
 if __name__=='__main__':
     unittest.main()
