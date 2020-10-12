@@ -77,6 +77,21 @@ class TestUser(unittest.TestCase):
         user_logged = User.login('anon', 'pal1234')
         self.assertTrue(user_logged)
 
+class TestCredentials(unittest.TestCase):
+    '''
+    Test class that defines test cases for user credential behaviours
+    '''
+    def setUp(self):
+        '''
+        setup method to run before each test case
+        '''
+        self.new_creden = Credentials('pat_rodge', 'twitter', 'pat12', '1234')
+
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
 
 if __name__=='__main__':
     unittest.main()
