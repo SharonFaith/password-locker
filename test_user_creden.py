@@ -1,7 +1,7 @@
 import unittest
 #import pyperclip
 from user import User
-#from credentials import Credentials
+from credentials import Credentials
 
 class TestUser(unittest.TestCase):
     """
@@ -92,6 +92,16 @@ class TestCredentials(unittest.TestCase):
         tearDown method that does clean up after each test case has run.
         '''
         Credentials.credentials_list = []
+
+    def test_init(self):
+        '''
+        test to check if credentials objects is initialized properly
+        '''
+
+        self.assertEqual(self.new_creden.username, 'pat_rodge')
+        self.assertEqual(self.new_creden.app_name, 'twitter')
+        self.assertEqual(self.new_creden.app_uname, 'pat12')
+        self.assertEqual(self.new_creden.app_pword, '1234')
 
 if __name__=='__main__':
     unittest.main()
