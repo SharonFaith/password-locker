@@ -26,3 +26,9 @@ def add_credential(credentials):
 def gen_pword(length):
     gen_pwords = Credentials.generate_password(length)
     return gen_pwords
+
+def show_credentials(user_name):
+    return Credentials.display_details(user_name)
+
+def delete_credential(user_name, app_name):
+    return Credentials.delete_creden(user_name, app_name)
