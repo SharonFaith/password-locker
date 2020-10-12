@@ -35,3 +35,25 @@ class Credentials:
             if credential.username == user_name:
                 users_credentials.append(credential)
         return users_credentials
+
+    @classmethod
+    def delete_creden(cls, user_name, app_name):
+        '''
+        method that deletes a user\'s particular credential
+
+        Args:
+            user_name: current user username
+            app_name: inputted app name to be deleted
+        Returns:
+            an array that displays the users credentials minus the one deleted
+
+        '''
+        users_credentials = []
+        for credential in cls.credentials_list:
+            if credential.username == user_name:
+                users_credentials.append(credential)
+                if credential in users_credentials:
+                    if credential.app_name == app_name:
+ #                       users_credentials.remove(credential)
+                        Credentials.credentials_list.remove(credential)
+        return users_credentials
