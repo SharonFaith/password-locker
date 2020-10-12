@@ -65,5 +65,18 @@ class TestUser(unittest.TestCase):
         user_exists = User.user_exist('anon')
         self.assertTrue(user_exists)
 
+    def test_login(self):
+        '''
+        to test if current user is indicated on login
+        '''
+
+        self.new_user.save_user()
+        test_user = User('Yod', 'Ger', 'yod@email.com', 'anon', 'pal1234')
+        test_user.save_user()
+
+        user_logged = User.login('anon', 'pal1234')
+        self.assertTrue(user_logged)
+
+
 if __name__=='__main__':
     unittest.main()

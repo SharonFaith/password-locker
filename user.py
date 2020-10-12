@@ -33,3 +33,18 @@ class User:
         for user in cls.user_list:
             if user.username == user_name:
                 return True
+
+    @classmethod
+    def login(cls, user_name, pass_word):
+        '''
+        method that checks that password and username match before login
+
+        Args:
+            user_name: username entered
+            pass_word: password entered
+        Returns:
+            boolean: True or False depending on whether the login details entered match one of a user in user_list
+        '''
+        for user in cls.user_list:
+            if user.username == user_name and user.password == pass_word :
+                return True
