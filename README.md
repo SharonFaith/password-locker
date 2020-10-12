@@ -13,6 +13,7 @@ Password Locker is a command line run app that allows a user to create an accoun
 * Move contents to folder you desire
 
 ## Running the app
+*  Ensure you are in the folder where the app is contained
 *  In the terminal input this command: $ chmod +x run.py in the terminal
 *  Then run the main file with: $ ./run.py
 
